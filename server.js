@@ -9,8 +9,7 @@ app.use(cors())
 app.use(express.json())
 
 const uri = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.uoedn.mongodb.net/mern?retryWrites=true&w=majority&appName=Cluster0`;
-/* mongoose.connect('mongodb+srv://'+process.env.NAME+':'+process.env.PASSWORD+'@cluster0.ta9wa.mongodb.net/database?retryWrites=true&w=majority') */
-/* mongoose.connect('mongodb+srv://app1user:aleksandar030@cluster0.uoedn.mongodb.net/mern?retryWrites=true&w=majority&appName=Cluster0') */
+
 mongoose.connect(uri).then(() => console.log("Connected to MongoDB")).catch(err => console.log(err))
 
 
